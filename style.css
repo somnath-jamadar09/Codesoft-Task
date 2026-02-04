@@ -1,54 +1,188 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #e6f2ff;
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
-.calculator {
-    display: grid;
-    grid-template-columns: repeat(4, 70px);
-    gap: 10px;
-    background: #2196f3;
-    padding: 20px;
-    border-radius: 15px;
+/* BODY */
+body {
+    line-height: 1.6;
+    color: #333;
 }
 
-#display {
-    grid-column: span 4;
-    height: 50px;
-    font-size: 22px;
-    text-align: right;
-    padding-right: 10px;
-    border-radius: 8px;
-    border: none;
+/* HERO SECTION */
+.hero-wrapper {
+    background: #0f172a;
+    color: #fff;
+    padding: 10px 5%;
+    height: 100;
 }
 
-button {
-    height: 60px;
-    font-size: 20px;
-    border: none;
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-area h1 {
+    font-size: 26px;
+}
+
+.logo-area p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* NAV */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* HERO CONTENT */
+.hero-content {
+    margin-top: 100px;
+    max-width: 700px;
+}
+
+.main-name {
+    font-size: 48px;
+}
+
+.hero-subtext {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.btn-hire {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #38bdf8;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    padding: 60px 5%;
+    background: #f8fafc;
+}
+
+.about-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.profile-image-box img {
+    width: 280px;
     border-radius: 10px;
-    cursor: pointer;
-    background: #1976d2;
-    color: white;
 }
 
-button:hover {
-    background: #1565c0;
+.section-title {
+    font-size: 28px;
 }
 
-.operator {
-    background: #0d47a1;
+.accent-line {
+    width: 60px;
+    height: 4px;
+    background: #38bdf8;
+    margin: 10px 0 20px;
 }
 
-.equal {
-    background: #2e7d32;
+.about-headline {
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 
-.clear {
-    background: #c62828;
+.about-description {
+    font-size: 15px;
+    margin-bottom: 20px;
 }
 
+.btn-resume {
+    padding: 12px 25px;
+    background: #0f172a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* ===================== */
+/* 📱 RESPONSIVE DESIGN */
+/* ===================== */
+
+/* TABLET */
+@media (max-width: 992px) {
+    .main-name {
+        font-size: 40px;
+    }
+
+    .about-container {
+        gap: 25px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero-content {
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .main-name {
+        font-size: 32px;
+    }
+
+    .hero-subtext {
+        font-size: 14px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image-box img {
+        width: 220px;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    .btn-hire,
+    .btn-resume {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
